@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 80%;
+}
+
+#names{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+}
+
+#name, #email, #password{
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+#bornDate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 25px;
+}
+
+#bornDateLabel{
+    height: 30px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 15px;
+}
+
+#bornDayinputs{
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
+#day, #month, #year{
+    margin-top: 5px;
+    width: 31%;
+    height: 30px;
+}
+
+#country{
+    align-self: center;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 50px;
+}
+
+#checkbox{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#checkLabel{
+    height: 30px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#check{
+    height: 17px;
+    width: 17px;
+    margin-left: 3%;
+}
+
+#submit{
+    align-self: center;
+    height: 30px;
+    width: 90px;
+}

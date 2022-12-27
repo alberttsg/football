@@ -1,0 +1,2 @@
+register. Validar el email blurs
+login. con mail y password

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football</title>
+  <link rel="stylesheet" href="./register.css">
+</head>
+<body>
+  <div id="form">
+    <div id="names">
+      <input type="text" id="name" placeholder="name" name="name">
+      <input type="text" id="email" placeholder="email" name="email">
+      <input type="text" id="password" placeholder="password" name="password">
+    </div>
+    <div id="bornDate">
+      <label for="day" id="bornDateLabel">Born date</label>
+      <div id="bornDayinputs">
+        <input type="text" id="day" placeholder="day" name="day">
+        <input type="text" id="month" placeholder="month" name="month">
+        <input type="text" id="year" placeholder="year" name="year">
+      </div>
+    </div>
+    <select name="country" id="country">
+      <option value="Spain">Spain</option>
+      <option value="France">France</option>
+      <option value="Portugal">Portugal</option>
+      <option value="Andorra">Andorra</option>
+      <option value="England">England</option>
+      <option value="Germany">Germany</option>
+    </select>
+    <div id="checkbox">
+      <label for="check" id="checkLabel">Acepto las condiciones</label>
+      <input type="checkbox" id="check" name="check" value="check">
+    </div>
+    <input type="submit" name="submit" id="submit" value="Enviar">
+  </div>
+
+  <script type="module" src="./register.js"></script>
+</body>
+</html>
