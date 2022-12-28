@@ -5,4 +5,9 @@ async function insertCharacters({ name, lastName, birthDate, country, price, own
       return character;
   }
 
-export { insertCharacters }
+async function getCharactersRepository({ owner }){
+  const characters = await characterModel.find({ owner })
+  return characters
+}
+
+export { insertCharacters, getCharactersRepository }

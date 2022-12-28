@@ -26,6 +26,14 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  money: {
+    type: Number,
+    required: true,
+  },
+  rol: {
+    type: String,
+    required: true,
+  }
 })
 
 const characterSchema = new Schema({

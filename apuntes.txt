@@ -1,2 +1,5 @@
-register. Validar el email blurs
-login. con mail y password
+register. Validar el email blur
+
+rol admin y super admin
+
+rutas publicas y privadas

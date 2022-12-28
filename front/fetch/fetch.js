@@ -54,8 +54,21 @@ async function login(email, password){
 
 }
 
+async function characters(){
+  const response = await fetch(`http://localhost:3000/characters/getCharacters`,
+  {
+    method : 'GET',
+    headers : {
+      'Content-Type' : 'application/json',
+      'owner':'x'
+    }
+  });
 
-export { register, emailValidation, login }
+  return response
+}
+
+
+export { register, emailValidation, login, characters }
 
 
 

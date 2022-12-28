@@ -2,6 +2,9 @@ import { registerBll, loginBll, getAllEmailsBll } from './users.bll.js'
 
 async function registerUser(req, res){
   let token
+  const money = 500000
+  const rol = 'admin'
+
 
   const { name, email, birthDate, country, password } = req.body
 
@@ -10,7 +13,8 @@ async function registerUser(req, res){
     return
   }
   try{
-    token = await registerBll({ name, email, birthDate, country, password });
+    token = await registerBll({ name, email, birthDate, country, password, money, rol });
+
 
   } catch(e){
     res.send(e.message)
@@ -35,23 +39,25 @@ async function getAllEmails(req, res){
 }
 
 async function login(req, res){
-  let token 
+  let data
+
 
   const { email, password } = req.body
 
   if(!email || !password){
-    res.send('Campo vacio');
+    res.send({msg:'Campo vacio'});
     return
   }
 
   try{
-    token = await loginBll({ email, password })
+    data = await loginBll({ email, password })
 
   }catch(e){
-    res.send(e.message)
+    res.send({msg:e.message})
     return
   }
-    res.send({token})
+
+  res.json({data})
 }
 
 export { registerUser, getAllEmails, login }

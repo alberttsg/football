@@ -1,4 +1,4 @@
-import {registerCharactersBll } from './characters.bll.js'
+import {registerCharactersBll, getCharactersBll } from './characters.bll.js'
 
 async function registerCharacters(req, res){
   let character
@@ -20,6 +20,25 @@ async function registerCharacters(req, res){
       res.send({ character })
     }
 
+async function getCharacters(req, res){
+  let characters
 
+  const { owner } = req.headers
 
-export { registerCharacters }
+  if(!owner){
+    res.send('Campo vacio');
+      return
+    }
+
+  try{
+    characters = await getCharactersBll({ owner })
+
+  } catch(e){
+    res.send(e.message)
+    return
+  }
+    res.send({ characters })
+
+}
+
+export { registerCharacters, getCharacters }

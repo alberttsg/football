@@ -16,12 +16,12 @@ function getToken({ user }){
       return token
   }
 
-async function registerBll({ name, email, birthDate, country, password}){
+async function registerBll({ name, email, birthDate, country, password, money, rol}){
     let user
 
     const hashedPassword = hashSync(password, 10);
 
-    user = await insert({ name, email, birthDate, country, password : hashedPassword })
+    user = await insert({ name, email, birthDate, country, password : hashedPassword, money, rol })
 
     let token =  getToken({ user })
 
@@ -51,22 +51,26 @@ async function loginBll({ email, password }){
   let user
   let token
 
-  try{
     user = await loginRepository({ email })
+    if(!user){
+      throw new Error('wrong credentials')
+    }
 
     const isSamePassword = await compare(password, user.password);
-
     if(!isSamePassword){
+      console.log(232323232323)
       throw new Error('Wrong credentials')
     }
 
     token = getToken({ user })
-
-  }catch(e){
-    return e.message
+    if(!token){
+      throw new Error('Wrong token')
   }
+    const userName = user.name
+    return {token, userName}
 
-  return token
+
+
 
 
 }

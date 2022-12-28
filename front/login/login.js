@@ -16,10 +16,14 @@ submit.addEventListener('click', async ()=>{
   response = await login(email, password)
 
   const data = await response.json();
-  console.log(data.token)
+  console.log(data)
+  console.log(data.data.token)
 
-  if(data.token){
-    sessionStorage.setItem('token', data.token);
+
+  if(data.data.token){
+    console.log('entro', 989898989)
+    sessionStorage.setItem('token', data.data.token);
+    sessionStorage.setItem('userName', data.data.userName);
     window.location = '../users/users.html'
   }
 

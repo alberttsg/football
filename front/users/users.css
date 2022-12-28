@@ -1,0 +1,20 @@
+#div{
+  display:flex;
+  flex-direction: row;
+  width:500px;
+  height:200px;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+#divName, #divLastName, #divCountry, #divBirthday, #divPrice, #divBuy{
+  width:20%;
+}
+
+#divBuy{
+  margin-top: 17px;;
+}
+
+#simpsonName, #simpsonLastName, #simpsonCountry, #simpsonBirthDate, #simpsonPrice, #btnBuy{
+  margin-top:10px;
+}

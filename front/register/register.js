@@ -22,7 +22,7 @@ submit.addEventListener('click', async ()=>{
 
   response = await register(inputName, email, birthDate, country, password)
 
-
+  console.log(response)
   const data = await response.json();
   console.log(data)
 
