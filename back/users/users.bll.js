@@ -67,7 +67,10 @@ async function loginBll({ email, password }){
       throw new Error('Wrong token')
   }
     const userName = user.name
-    return {token, userName}
+    const userCoin = user.money
+    const userAdmin = user.rol
+    const userId = user._id
+    return {token, userName, userCoin, userAdmin, userId}
 
 
 

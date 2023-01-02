@@ -3,8 +3,14 @@ import { getCharacters } from './functions.js'
 
 const token = sessionStorage.getItem('token')
 const userName = sessionStorage.getItem('userName')
+const userCoin = sessionStorage.getItem('userCoin')
+const userAdmin = sessionStorage.getItem('userAdmin')
+const userId = sessionStorage.getItem('userId')
 console.log(token)
 console.log(userName)
+console.log(userCoin)
+console.log(userAdmin)
+console.log(userId)
 
 const div = document.getElementById('div')
 
@@ -42,7 +48,17 @@ divUserName.id = 'divUserName'
 divUserName.innerText = `Hola:${userName}`
 div.appendChild(divUserName)
 
+const divUserCoin = document.createElement('div')
+divUserCoin.id = 'divUserCoin'
+divUserCoin.innerText = `Tienes:${userCoin}€`
+div.appendChild(divUserCoin)
 
+if(userAdmin === 'superAdmin'){
+  const divSuperAdmin = document.createElement('div')
+  divSuperAdmin.id = 'divSuperAdmin'
+  divSuperAdmin.innerText = `Admin`
+  div.appendChild(divSuperAdmin)
+}
 
 
 await getCharacters()

@@ -1,10 +1,18 @@
+#characters{
+  position:absolute;
+  top:4%;
+  left:5%;
+  font-weight: 800;
+  font-size: 20px;
+}
+
 #div{
   display:flex;
   flex-direction: row;
   width:500px;
   height:200px;
-  margin-top: 3%;
-  margin-left: 3%;
+  margin-top: 5%;
+  margin-left: 4%;
 }
 
 #divName, #divLastName, #divCountry, #divBirthday, #divPrice, #divBuy{
@@ -15,6 +23,42 @@
   margin-top: 17px;;
 }
 
-#simpsonName, #simpsonLastName, #simpsonCountry, #simpsonBirthDate, #simpsonPrice, #btnBuy{
+#simpsonName, #simpsonLastName, #simpsonCountry, #simpsonBirthDate, #simpsonPrice, .btnBuy{
   margin-top:10px;
+}
+
+#divUserName{
+  position:absolute;
+  top:3%;
+  right:5%;
+  font-size: 17px;
+}
+
+#divUserCoin{
+  position:absolute;
+  top:7%;
+  right:3.5%;
+  font-size: 17px;
+}
+
+#divSuperAdmin{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:absolute;
+  width:90px;
+  height: 30px;
+  top:13%;
+  right:5%;
+  font-size: 17px;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:16px;
+  transition:all 0.5s;
+}
+
+#divSuperAdmin:hover{
+  cursor:pointer;
+  background-color:rgb(212, 212, 212)
 }

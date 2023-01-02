@@ -41,4 +41,5 @@ async function getCharacters(req, res){
 
 }
 
+
 export { registerCharacters, getCharacters }
