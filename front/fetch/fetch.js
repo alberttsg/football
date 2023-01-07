@@ -67,8 +67,58 @@ async function characters(){
   return response
 }
 
+async function charactersById(id){
 
-export { register, emailValidation, login, characters }
+  const response = await fetch(`http://localhost:3000/characters/getCharactersById`,
+  {
+    method : 'GET',
+    headers : {
+      'Content-Type' : 'application/json',
+      'id': id
+    }
+  });
+  return response 
+}
+
+async function upddateBuyCharacter(characterId, userId, price, money){
+
+  const response = await fetch(`http://localhost:3000/characters/buyCharacter`,
+  {
+    method : 'PUT',
+    headers : {
+      'Content-Type' : 'application/json'
+    },
+     body : JSON.stringify({
+      characterId,
+      userId,
+      price,
+      money
+     })
+  });
+  return response 
+
+}
+
+async function upddateSellCharacter(characterId, userId, price, money){
+
+  const response = await fetch(`http://localhost:3000/characters/sellCharacter`,
+  {
+    method : 'PUT',
+    headers : {
+      'Content-Type' : 'application/json'
+    },
+     body : JSON.stringify({
+      characterId,
+      userId,
+      price,
+      money
+     })
+  });
+  return response 
+
+}
+
+export { register, emailValidation, login, characters, charactersById, upddateBuyCharacter, upddateSellCharacter }
 
 
 

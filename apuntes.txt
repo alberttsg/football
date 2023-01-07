@@ -3,3 +3,8 @@ register. Validar el email blur
 rol admin y super admin
 
 rutas publicas y privadas
+
+try cacth controller
+thow new error en bll
+
+Fotos en base de datos
