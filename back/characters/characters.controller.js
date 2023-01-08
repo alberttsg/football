@@ -1,4 +1,5 @@
 import {registerCharactersBll, getCharactersBll, buyCharacterBll, getCharactersByIdBll, sellCharacterBll } from './characters.bll.js'
+import path from 'path'
 
 async function registerCharacters(req, res){
   let character
@@ -9,14 +10,17 @@ async function registerCharacters(req, res){
     res.send('Campo vacio');
       return
     }
+    const ext = path.extname(req.file.filename)
+    const img = `/back/public/data/uploads/${name}${ext}`
 
     try{
-      character = await registerCharactersBll({name, lastName, birthDate, country, registerDate, price, owner })
+      character = await registerCharactersBll({name, lastName, birthDate, country, registerDate, price, owner, img })
 
     } catch(e){
       res.send(e.message)
       return
     }
+
       res.send({ character })
     }
 

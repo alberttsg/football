@@ -1,10 +1,10 @@
 import { insertCharacters, getCharactersRepository, getCharactersByIdRepository, buyCharacterRepository, buyCharacterRepositoryUser, sellCharacterRepository, sellCharacterRepositoryUser } from './characters.repository.js'
 
-async function registerCharactersBll({ name, lastName, birthDate, country, registerDate, price, owner  }){
+async function registerCharactersBll({ name, lastName, birthDate, country, registerDate, price, owner, img  }){
   let character
 
   try{
-    character = await insertCharacters({ name, lastName, birthDate, country, registerDate, price, owner  })
+    character = await insertCharacters({ name, lastName, birthDate, country, registerDate, price, owner, img  })
 
   } catch(e){
     return e.message
