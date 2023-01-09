@@ -7,3 +7,33 @@ rutas publicas y privadas
 try cacth controller
 thow new error en bll
 
+
+
+rutas ejercicio
+
+EDU
+- ruta gestione los productos
+- ruta get. con /all que devuelva todos los productos o parte de ellos. devuelve array(req.query)
+- ruta get. :id Busqueda por id
+- ruta post, para añadir productos. Solo los admin pueden hacer esta ruta
+- ruta put, para actualizar productos a /:id. Solo los admin pueden hacer esta ruta
+- ruta delete, para borrar productos a /:id. Solo los admin pueden hacer esta ruta
+
+CHARLOTTE
+- ruta get /all, que traiga todos los users. Solo los admin pueden hacer esta ruta
+- ruta get /:id, que traiga un user
+- ruta get /:id, que traiga un user. Solo los admin pueden hacer esta ruta(los admin pueden ver todos los users, cada user solo puede ver el suyo)
+- ruta put /:id, actualizar users.(cada user se puede actualizar a si mismo(menos el rol) y el admin a todos)
+- ruta delete /:id. Ruta borrar users. Solo los admin pueden hacer esta ruta
+- rutas register y login
+
+YO
+carrito
+- ruta get /:userId, que traiga el carrito de esa persona. el client ve el suyo y el admin el de todo el mundo.
+- ruta put /:userId, actualizar carrito user. el client ve el suyo y el admin el de todo el mundo.
+tickets
+- ruta get /:userId, tickets comprados por el user. array de todas las compras. el client ve el suyo y el admin el de todo el mundo.
+- ruta post / , confirmar carrito. inserta el carrito en base de datos. El carrito se tiene que vaciar una vez introducido
+
+*dos colecciones
+tickets en proceso, tickets finalizados

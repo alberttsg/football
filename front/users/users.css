@@ -35,19 +35,6 @@
   height:200px;
 }
 
-
-#divName, #divLastName, #divCountry, #divBirthday, #divPrice, #divBuy{
-  width:20%;
-}
-
-#divBuy{
-  margin-top: 17px;;
-}
-
-#simpsonName, #simpsonLastName, #simpsonCountry, #simpsonBirthDate, #simpsonPrice, .btnBuy{
-  margin-top:10px;
-}
-
 #divUserName{
   position:absolute;
   top:3%;
