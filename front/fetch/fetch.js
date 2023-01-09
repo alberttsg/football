@@ -17,6 +17,7 @@ async function register(inputName, email, birthDate, country, password){
   });
 
   return response
+
 }
 
 async function emailValidation(){
